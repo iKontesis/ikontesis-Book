@@ -9,238 +9,226 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600&amp;display=swap');
         
-        :root {
-            --font-sans: 'Inter', system_ui, sans-serif;
-            --font-display: 'Space Grotesk', 'Inter', sans-serif;
-        }
-        
         body {
-            font-family: var(--font-sans);
+            font-family: 'Inter', system_ui, sans-serif;
         }
         
         .display-font {
-            font-family: var(--font-display);
+            font-family: 'Space Grotesk', 'Inter', sans-serif;
             font-weight: 600;
-            letter-spacing: -0.025em;
+            letter-spacing: -0.03em;
         }
 
-        .hero-bg {
-            background: linear-gradient(180deg, #0a0a0a 0%, #111113 100%);
+        .executive-bg {
+            background-color: #0a1429;
         }
 
         .section-header {
-            font-size: 1.1rem;
-            letter-spacing: 0.5px;
+            font-size: 0.875rem;
+            letter-spacing: 1.5px;
             font-weight: 600;
-            color: #a1a1aa;
+            color: #64748b;
         }
 
         .book-shadow {
-            box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.4);
+            box-shadow: 0 30px 60px -15px rgb(0 0 0 / 0.5);
         }
 
-        .nav-active {
-            color: white;
-            border-bottom: 2px solid #3b82f6;
+        .nav-link {
+            transition: color 0.2s ease;
+        }
+        .nav-link:hover {
+            color: #e0e7ff;
+        }
+
+        .quote {
+            border-left: 4px solid #3b82f6;
         }
     </style>
 </head>
-<body class="bg-zinc-950 text-zinc-200">
+<body class="executive-bg text-slate-200">
     <!-- Navbar -->
-    <nav class="border-b border-zinc-800 bg-zinc-950/80 backdrop-blur-lg sticky top-0 z-50">
-        <div class="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
+    <nav class="border-b border-slate-800 bg-[#0a1429]/95 backdrop-blur-md sticky top-0 z-50">
+        <div class="max-w-5xl mx-auto px-6 py-5 flex items-center justify-between">
             <div class="flex items-center gap-x-3">
-                <div class="w-9 h-9 bg-white rounded-lg flex items-center justify-center">
-                    <span class="text-zinc-950 font-bold text-xl">IK</span>
+                <div class="w-9 h-9 bg-white rounded-xl flex items-center justify-center shadow-inner">
+                    <span class="text-[#0a1429] font-bold text-2xl tracking-tighter">IK</span>
                 </div>
                 <div>
-                    <span class="font-semibold text-xl tracking-tight">Ιωάννης Κοντέσης</span>
+                    <span class="font-semibold text-2xl tracking-tight">Ιωάννης Κοντέσης</span>
                 </div>
             </div>
             
-            <div class="flex items-center gap-x-8 text-sm">
-                <a href="#why" class="hover:text-white transition-colors">Γιατί να το διαβάσετε</a>
-                <a href="#bio" class="hover:text-white transition-colors">Συγγραφέας</a>
-                <a href="https://github.com/iKontesis" target="_blank" class="hover:text-white transition-colors flex items-center gap-x-1.5">
-                    <i class="fa-brands fa-github"></i>
+            <div class="hidden md:flex items-center gap-x-8 text-sm font-medium">
+                <a href="#why" class="nav-link text-slate-300 hover:text-white">Γιατί να το διαβάσετε</a>
+                <a href="#reviews" class="nav-link text-slate-300 hover:text-white">Τι είπαν</a>
+                <a href="#bio" class="nav-link text-slate-300 hover:text-white">Συγγραφέας</a>
+                <a href="https://github.com/iKontesis" target="_blank" 
+                   class="flex items-center gap-x-2 text-slate-300 hover:text-white">
+                    <i class="fa-brands fa-github text-lg"></i>
                     <span>GitHub</span>
                 </a>
             </div>
         </div>
     </nav>
 
-    <!-- Hero / Cover -->
-    <div class="max-w-5xl mx-auto px-6 pt-12 pb-16">
-        <div class="grid md:grid-cols-12 gap-10 items-center">
+    <!-- Hero -->
+    <div class="max-w-5xl mx-auto px-6 pt-14 pb-20">
+        <div class="grid md:grid-cols-12 gap-x-10 items-center">
             
             <!-- Cover -->
-            <div class="md:col-span-5">
-                <div class="relative">
+            <div class="md:col-span-5 flex justify-center md:justify-start">
+                <div class="relative max-w-[360px]">
                     <img src="cover.JPG" 
-                         alt="Εξώφυλλο: Στρατηγική στην Εποχή της AI" 
-                         class="w-full max-w-[380px] mx-auto rounded-2xl book-shadow border border-zinc-800">
+                         alt="Εξώφυλλο βιβλίου: Στρατηγική στην Εποχή της AI" 
+                         class="w-full rounded-3xl book-shadow border border-slate-700">
                     
-                    <!-- Subtle badge -->
-                    <div class="absolute -top-3 -right-3 bg-zinc-900 border border-zinc-700 text-xs px-3 py-1 rounded-full flex items-center gap-x-2">
-                        <div class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></div>
-                        <span class="text-emerald-400 font-medium">2026 • Δωρεάν</span>
+                    <div class="absolute -top-4 -right-4 bg-[#0a1429] border border-slate-700 text-xs px-4 py-1.5 rounded-2xl flex items-center gap-x-2 shadow-lg">
+                        <div class="w-2 h-2 bg-blue-400 rounded-full animate-pulse"></div>
+                        <span class="font-medium text-blue-300">2026 • Δωρεάν</span>
                     </div>
                 </div>
             </div>
 
-            <!-- Title & CTA -->
-            <div class="md:col-span-7">
-                <div class="max-w-xl">
-                    <div class="inline-flex items-center gap-x-2 bg-zinc-900 border border-zinc-800 rounded-full px-4 py-1 text-sm mb-6">
-                        <span class="text-emerald-400">•</span>
-                        <span class="font-medium">Creative Commons • CC BY-NC-ND 4.0</span>
+            <!-- Title + CTA -->
+            <div class="md:col-span-7 mt-10 md:mt-0">
+                <div class="max-w-2xl">
+                    <div class="inline-flex items-center gap-x-2 bg-slate-900 border border-slate-700 rounded-full px-5 py-1.5 text-sm mb-6">
+                        <span class="text-blue-400">●</span>
+                        <span class="font-medium tracking-wide">Creative Commons CC BY-NC-ND 4.0</span>
                     </div>
 
-                    <h1 class="display-font text-6xl md:text-7xl leading-[0.95] tracking-tighter font-semibold mb-4">
+                    <h1 class="display-font text-6xl md:text-[72px] leading-[0.92] tracking-[-3.5px] font-semibold mb-5 text-white">
                         ΣΤΡΑΤΗΓΙΚΗ<br>ΣΤΗΝ ΕΠΟΧΗ<br>ΤΗΣ AI
                     </h1>
                     
-                    <p class="text-2xl text-zinc-400 mb-8">
+                    <p class="text-3xl text-slate-300 mb-9 tracking-tight">
                         Η ευθύνη ΔΕΝ αυτοματοποιείται
                     </p>
 
+                    <!-- Download Buttons -->
                     <div class="flex flex-col sm:flex-row gap-4">
                         <a href="strategiki-stin-epoxi-tis-ai.pdf" 
-                           class="flex-1 sm:flex-none inline-flex items-center justify-center gap-x-3 bg-white hover:bg-zinc-100 active:bg-zinc-200 transition-all text-zinc-950 font-semibold px-8 py-4 rounded-2xl text-lg">
-                            <i class="fa-solid fa-download"></i>
+                           class="flex-1 inline-flex items-center justify-center gap-x-3 bg-white hover:bg-slate-100 active:bg-slate-200 transition-all text-[#0a1429] font-semibold px-9 py-[17px] rounded-2xl text-lg shadow-lg">
+                            <i class="fa-solid fa-download text-xl"></i>
                             <span>Λήψη PDF</span>
                         </a>
                         
+                        <!-- EPUB commented for now -->
+                        <!-- 
                         <a href="strategiki-stin-epoxi-tis-ai.epub" 
-                           class="flex-1 sm:flex-none inline-flex items-center justify-center gap-x-3 border border-zinc-700 hover:bg-zinc-900 transition-all font-medium px-8 py-4 rounded-2xl text-lg">
+                           class="flex-1 inline-flex items-center justify-center gap-x-3 border border-slate-600 hover:bg-slate-900 transition-all font-medium px-9 py-[17px] rounded-2xl text-lg">
                             <i class="fa-solid fa-book"></i>
                             <span>Λήψη EPUB</span>
                         </a>
+                        -->
                     </div>
                     
-                    <p class="text-xs text-zinc-500 mt-4">
-                        129 σελίδες • Ελληνικά • Δωρεάν διανομή
-                    </p>
+                    <p class="text-sm text-slate-500 mt-4">129 σελίδες • Ελληνικά • Δωρεάν διανομή</p>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Why read this book -->
-    <div id="why" class="max-w-5xl mx-auto px-6 py-16 border-t border-zinc-800">
+    <!-- Why read this -->
+    <div id="why" class="max-w-5xl mx-auto px-6 py-16 border-t border-slate-800">
         <div class="max-w-3xl">
-            <div class="section-header mb-4">ΓΙΑΤΙ ΝΑ ΤΟ ΔΙΑΒΑΣΕΤΕ</div>
+            <div class="section-header mb-3">ΓΙΑΤΙ ΝΑ ΤΟ ΔΙΑΒΑΣΕΤΕ</div>
+            <h2 class="display-font text-5xl tracking-[-1.5px] mb-9">Δεν είναι άλλο ένα βιβλίο για AI.</h2>
             
-            <h2 class="display-font text-4xl tracking-tight mb-8">Δεν είναι άλλο ένα βιβλίο για AI.</h2>
-            
-            <div class="grid md:grid-cols-2 gap-x-10 gap-y-8 text-[15px] leading-relaxed">
+            <div class="grid md:grid-cols-2 gap-x-12 gap-y-8 text-[15.5px] leading-relaxed text-slate-300">
                 <div>
-                    <p class="mb-6"><strong>Πρακτική εμπειρία, όχι θεωρία.</strong><br>
-                    30+ χρόνια σε τραπεζικές συγχωνεύσεις, Capital Controls, NPLs, φιλοξενία και επιχειρηματικότητα. 
-                    Το βιβλίο γράφτηκε από ανθρώπους που έχουν υπογράψει αποφάσεις όταν το κόστος ήταν πραγματικό.</p>
+                    <p class="mb-6"><strong class="text-white">Πρακτική εμπειρία από πραγματικές κρίσεις.</strong><br>
+                    30+ χρόνια σε τραπεζικές ενοποιήσεις, Capital Controls, NPLs και ηγετικές θέσεις στη φιλοξενία. 
+                    Το βιβλίο δεν γράφτηκε από θεωρητικούς.</p>
                     
-                    <p><strong>Εστίαση στην ευθύνη.</strong><br>
-                    Ενώ όλοι μιλάνε για ταχύτητα και παραγωγικότητα, αυτό το βιβλίο θέτει το ερώτημα που λίγοι θέτουν: 
+                    <p><strong class="text-white">Εστίαση στην ευθύνη, όχι στην τεχνολογία.</strong><br>
+                    Ενώ όλοι μιλάνε για ταχύτητα και παραγωγικότητα, εδώ τίθεται το δύσκολο ερώτημα: 
                     <span class="text-white font-medium">Ποιος πληρώνει όταν ο αλγόριθμος κάνει λάθος;</span></p>
                 </div>
-                
                 <div>
-                    <p class="mb-6"><strong>Antifragility + Iterative Governance.</strong><br>
-                    Συνδυάζει το πλαίσιο του Nassim Taleb με την στρατηγική ανάλυση του Robert M. Grant και το μεταφέρει 
-                    στην πραγματικότητα των επιχειρήσεων και των ρυθμιζόμενων κλάδων.</p>
+                    <p class="mb-6"><strong class="text-white">Antifragility + Iterative Governance.</strong><br>
+                    Συνδυάζει το πλαίσιο του Nassim Taleb με την κλασική στρατηγική ανάλυση του Robert M. Grant και το φέρνει στην πραγματικότητα των ρυθμιζόμενων κλάδων.</p>
                     
-                    <p><strong>Δωρεάν &amp; ανοιχτό.</strong><br>
-                    Διατίθεται με άδεια CC BY-NC-ND 4.0. Όχι για να πουλήσει μια άποψη, αλλά για να τεθεί σε δημόσια κρίση.</p>
+                    <p><strong class="text-white">Δωρεάν και ανοιχτό.</strong><br>
+                    Διατίθεται με άδεια CC BY-NC-ND 4.0. Σκοπός του δεν είναι να πουλήσει, αλλά να τεθεί σε δημόσια κρίση.</p>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Key message -->
-    <div class="max-w-5xl mx-auto px-6 py-12">
-        <div class="bg-zinc-900 border border-zinc-800 rounded-3xl p-10 md:p-14">
-            <div class="max-w-3xl">
-                <div class="text-emerald-400 text-sm tracking-[1.5px] font-medium mb-3">ΤΟ ΚΕΝΤΡΙΚΟ ΜΗΝΥΜΑ</div>
-                <p class="text-3xl md:text-4xl leading-tight tracking-tight">
-                    «Η Τεχνητή Νοημοσύνη μπορεί να αλλάξει τον τρόπο που αναλύουμε, οργανώνουμε και προβλέπουμε.<br>
-                    <span class="font-semibold">Δεν μπορεί να καταργήσει το ανθρώπινο διακύβευμα.»</span>
+    <!-- Τι είπαν για το βιβλίο -->
+    <div id="reviews" class="max-w-5xl mx-auto px-6 py-16 border-t border-slate-800">
+        <div class="max-w-3xl">
+            <div class="section-header mb-4">ΤΙ ΕΙΠΑΝ ΓΙΑ ΤΟ ΒΙΒΛΙΟ</div>
+            
+            <div class="quote bg-slate-900/60 border border-slate-700 rounded-3xl p-9 md:p-11">
+                <p class="text-2xl md:text-[26px] leading-tight tracking-[-0.4px] text-slate-100">
+                    «Η αξία αυτού του βιβλίου βρίσκεται ακριβώς εκεί. Δεν χαρίζεται στη μόδα της εποχής, 
+                    αλλά ούτε και την αγνοεί. Εξηγεί γιατί η στρατηγική δεν μπορεί πλέον να είναι ένα στατικό σχέδιο... 
+                    Η ευθύνη, όπως σωστά επιμένει αυτό το βιβλίο, δεν αυτοματοποιείται.»
                 </p>
-                <p class="mt-6 text-zinc-400">— Από τον Επίλογο</p>
+                <div class="mt-8 flex items-center gap-x-4">
+                    <div>
+                        <p class="font-semibold text-white">Πέτρος Λάζος</p>
+                        <p class="text-sm text-slate-400">Επιχειρηματίας / Αρθρογράφος capital.gr</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
     <!-- Author bio -->
-    <div id="bio" class="max-w-5xl mx-auto px-6 py-16 border-t border-zinc-800">
+    <div id="bio" class="max-w-5xl mx-auto px-6 py-16 border-t border-slate-800">
         <div class="max-w-3xl">
             <div class="section-header mb-4">Ο ΣΥΓΓΡΑΦΕΑΣ</div>
             
-            <div class="flex flex-col md:flex-row gap-8 items-start">
-                <div class="flex-1">
-                    <h3 class="text-3xl tracking-tight mb-4">Ιωάννης Κοντέσης</h3>
-                    
-                    <div class="prose prose-invert text-[15px] text-zinc-300">
-                        <p>Επαγγελματίας με περισσότερα από 30 χρόνια εμπειρίας σε ρυθμιζόμενα περιβάλλοντα. 
-                        Ξεκίνησε στην Τράπεζα Εργασίας (1995) και συνέχισε στον Όμιλο Eurobank, όπου συντόνισε 
-                        τέσσερις τραπεζικές ενοποιήσεις και διαχειρίστηκε κρίσεις σε πραγματικό χρόνο (Capital Controls, NPLs).</p>
-                        
-                        <p>Μετέπειτα συν-ίδρυσε περιφερειακή B2B επιχείρηση και εργάστηκε σε ηγετικές θέσεις 
-                        σε ξενοδοχειακές μονάδες 5★/4★ στα Ιόνια Νησιά (Λογιστική → Γενικός Διευθυντής → Επικεφαλής Λογιστής).</p>
-                        
-                        <p>Σήμερα εστιάζει στη στρατηγική διοίκηση στην εποχή της AI, με έμφαση στην 
-                        <strong>αντι-ευθραυστότητα</strong>, την επαναληπτική διακυβέρνηση και την ανθρώπινη λογοδοσία.</p>
-                    </div>
-                </div>
+            <h3 class="display-font text-4xl tracking-tight mb-6">Ιωάννης Κοντέσης</h3>
+            
+            <div class="prose prose-invert max-w-none text-[15.5px] text-slate-300">
+                <p>Επαγγελματίας με περισσότερα από 30 χρόνια εμπειρίας σε ρυθμιζόμενα περιβάλλοντα. 
+                Ξεκίνησε στην Τράπεζα Εργασίας (1995) και συνέχισε στον Όμιλο Eurobank, όπου συντόνισε 
+                τέσσερις τραπεζικές ενοποιήσεις και διαχειρίστηκε κρίσεις σε πραγματικό χρόνο.</p>
                 
-                <div class="md:w-72 text-sm text-zinc-400 border-l border-zinc-800 pl-6 md:pl-8 pt-1">
-                    <div class="space-y-3">
-                        <div>
-                            <span class="block text-xs tracking-widest text-zinc-500">LINKEDIN</span>
-                            <a href="https://linkedin.com/in/iKontesis" class="hover:text-white">linkedin.com/in/iKontesis</a>
-                        </div>
-                        <div>
-                            <span class="block text-xs tracking-widest text-zinc-500">X / TWITTER</span>
-                            <a href="https://x.com/ikontesis" class="hover:text-white">@ikontesis</a>
-                        </div>
-                        <div>
-                            <span class="block text-xs tracking-widest text-zinc-500">GITHUB</span>
-                            <a href="https://github.com/iKontesis" class="hover:text-white">github.com/iKontesis</a>
-                        </div>
-                    </div>
-                </div>
+                <p>Στη συνέχεια συν-ίδρυσε περιφερειακή B2B επιχείρηση και κατείχε ηγετικές θέσεις 
+                σε ξενοδοχειακές μονάδες 5★/4★ (Από Λογιστής σε Γενικό Διευθυντή).</p>
+                
+                <p>Σήμερα εστιάζει στη στρατηγική διοίκηση στην εποχή της AI, με έμφαση στην 
+                <strong class="text-white">αντι-ευθραυστότητα</strong> και την ανθρώπινη λογοδοσία.</p>
+            </div>
+            
+            <div class="mt-8 flex flex-wrap gap-x-6 gap-y-3 text-sm">
+                <a href="https://linkedin.com/in/iKontesis" class="flex items-center gap-x-2 hover:text-white">
+                    <i class="fa-brands fa-linkedin text-xl"></i> 
+                    <span>LinkedIn</span>
+                </a>
+                <a href="https://x.com/ikontesis" class="flex items-center gap-x-2 hover:text-white">
+                    <i class="fa-brands fa-x-twitter text-xl"></i> 
+                    <span>@ikontesis</span>
+                </a>
+                <a href="https://github.com/iKontesis" class="flex items-center gap-x-2 hover:text-white">
+                    <i class="fa-brands fa-github text-xl"></i> 
+                    <span>GitHub</span>
+                </a>
             </div>
         </div>
     </div>
 
     <!-- Footer -->
-    <footer class="border-t border-zinc-800 bg-zinc-950">
-        <div class="max-w-5xl mx-auto px-6 py-10 text-sm text-zinc-400">
+    <footer class="border-t border-slate-800 bg-[#0a1429]">
+        <div class="max-w-5xl mx-auto px-6 py-10 text-sm text-slate-400">
             <div class="flex flex-col md:flex-row md:items-center justify-between gap-y-4">
                 <div>
                     <p>© 2026 Ιωάννης Κοντέσης</p>
-                    <p class="mt-1">Διατίθεται υπό την άδεια <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" class="underline hover:text-white">CC BY-NC-ND 4.0</a></p>
+                    <p class="mt-1">Διατίθεται υπό την άδεια <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" class="underline hover:text-slate-300">CC BY-NC-ND 4.0</a></p>
                 </div>
                 
                 <div class="text-xs">
-                    ISBN: <span class="font-mono">[σε διαδικασία χορήγησης από την Εθνική Βιβλιοθήκη της Ελλάδος]</span><br>
+                    ISBN: <span class="font-mono text-slate-500">[σε διαδικασία χορήγησης από την Εθνική Βιβλιοθήκη της Ελλάδος]</span><br>
                     Ηλεκτρονική έκδοση • Αθήνα, 2026
                 </div>
             </div>
-            
-            <div class="mt-8 pt-6 border-t border-zinc-800 text-[11px] text-zinc-500 flex flex-wrap gap-x-4 gap-y-1">
-                <span>Δεν επιτρέπεται εμπορική χρήση.</span>
-                <span>Δεν επιτρέπονται παράγωγα έργα.</span>
-                <span>Απαιτείται αναφορά του συγγραφέα.</span>
-            </div>
         </div>
     </footer>
-
-    <script>
-        // Simple Tailwind script (optional enhancements)
-        function initializeTailwind() {
-            document.documentElement.style.setProperty('--accent', '#3b82f6');
-        }
-        window.onload = initializeTailwind;
-    </script>
 </body>
 </html>
